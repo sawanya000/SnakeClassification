@@ -104,17 +104,18 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/manualBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_marginStart="55dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="55dp"
         android:background="@drawable/bg_btn_main"
+        android:clickable="true"
         android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintEnd_toEndOf="@+id/infoBtn"
+        app:layout_constraintStart_toStartOf="@+id/infoBtn"
+        app:layout_constraintTop_toBottomOf="@+id/infoBtn">
 
 
         <ImageView
@@ -142,7 +143,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/infoBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -151,12 +152,12 @@
         android:layout_marginEnd="55dp"
         android:background="@drawable/bg_btn_main"
         android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="@+id/pictureBtn"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintStart_toStartOf="@+id/pictureBtn"
+        app:layout_constraintTop_toBottomOf="@+id/pictureBtn">
 
 
         <ImageView
@@ -184,7 +185,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/pictureBtn"
         android:clickable="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
