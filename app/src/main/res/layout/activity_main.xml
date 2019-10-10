@@ -7,7 +7,7 @@
     android:background="@color/Primary"
     tools:context=".MainActivity">
 
-<<<<<<< HEAD
+
     <androidx.appcompat.widget.AppCompatToggleButton
         android:id="@+id/btn_sw_lan"
         android:layout_width="54dp"
@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.071" />
 
 
-=======
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
