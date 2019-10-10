@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="App_Name">Snake Classification</string>
     <string name="Main_ChoosePic">เลือกรูปภาพ</string>
-    <string name="Main_Info">ข้อมูลงูพิษในประเทศไทย</string>
-    <string name="Main_Manual">คู่มือการใช้งาน</string>
+    <string name="Main_Info">ssssssssssssss</string>
+    <string name="Main_Manual">nnnnnnnnnnnnnnnnn</string>
 
 
     <string name="Load">กำลังโหลด</string>
@@ -35,5 +36,4 @@
     <string name="Manual_Info_Step1">เลือกรูปจากคลังรูปภาพหรือถ่ายรูปเพื่อนำภาพไปประมวลผลว่าเป็นงูพิษในประเทศไทยสายพันธุ์ใด</string>
     <string name="Manual_Info_Step2">ถ่ายรูปภาพงูและครอบตัดบริเวณที่มีงูในรูปภาพ โดยทำการครอบตัดภาพให้เห็นงูเต็มตัว เพื่อนำไปประมวลผล</string>
     <string name="Manual_Info_Step3">ระบบจะทำการวิเคราะห์ภาพงูที่ส่งเข้ามา ซึ่งแสดงผลเป็นสายพันธุ์ของงูพิษที่มีความเป็นไปได้ 3 อันดับแรกและเซรุ่มที่เหมาะสมกับสายพันธุ์งูนั้น ๆ</string>
-
 </resources>
