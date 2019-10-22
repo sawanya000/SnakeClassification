@@ -17,13 +17,13 @@ class ManualAdapter(var models:ArrayList<ManualModel>,var context:Context): Page
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        var context:Context
         var layoutInflater = LayoutInflater.from(container.context)
         var view:View
         view = layoutInflater.inflate(R.layout.manual_item,container,false)
 
         view.picManual.setImageResource(models.get(position).getImage())
         view.titleManual.setText(models.get(position).getTitle())
+        view.infoManual.setText(models.get(position).getInfo())
 
         container.addView(view,0)
 

@@ -1,6 +1,7 @@
 package com.mahidol.snakeclassification
 
 import android.animation.ArgbEvaluator
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
@@ -13,9 +14,9 @@ class ManualActivity : AppCompatActivity() {
         setContentView(R.layout.activity_manual)
 
         var models = ArrayList<ManualModel>()
-        models.add(ManualModel(R.mipmap.manual_pic_step1,"title step1","info stpe1"))
-        models.add(ManualModel(R.mipmap.manual_pic_step2,"title step2","info stpe2"))
-        models.add(ManualModel(R.mipmap.manual_pic_step3,"title step3","info stpe3"))
+        models.add(ManualModel(R.mipmap.manual_pic_step1,getString(R.string.Manual_Name_Step1),getString(R.string.Manual_Info_Step1)))
+        models.add(ManualModel(R.mipmap.manual_pic_step2,getString(R.string.Manual_Name_Step2),getString(R.string.Manual_Info_Step1)))
+        models.add(ManualModel(R.mipmap.manual_pic_step3,getString(R.string.Manual_Name_Step3),getString(R.string.Manual_Info_Step1)))
 
         val adapter = ManualAdapter(models,this)
         manualViewPager.adapter = adapter
@@ -46,7 +47,8 @@ class ManualActivity : AppCompatActivity() {
                 manualViewPager.setCurrentItem(manualViewPager.getCurrentItem() + 1);
             }
             else{
-
+                var intent = Intent(this,MainActivity::class.java)
+                startActivity(intent)
             }
         }
     }
