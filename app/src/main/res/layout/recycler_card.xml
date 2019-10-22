@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="130dp"
+    android:layout_height="150dp"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -34,7 +34,8 @@
             android:id="@+id/headerTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
+            android:textSize="20sp"
+            android:fontFamily="@font/th_sarabun_new_bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,9 +43,9 @@
             android:id="@+id/introTxt"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/th_sarabun_new_bold"
             android:maxLines="4"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/headerTxt" />
