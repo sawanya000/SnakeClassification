@@ -26,11 +26,17 @@ class ManualActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {}
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                if(position==(adapter.getCount()-1)){
-                    manualBtn.setText("START")
-                }
-                else{
+                if(position==(adapter.getCount()-3)){
                     manualBtn.setText("NEXT")
+                    manualScroll.setImageResource(R.mipmap.manual_scroll_step1)
+                }
+                else if(position==(adapter.getCount()-2)){
+                    manualBtn.setText("NEXT")
+                    manualScroll.setImageResource(R.mipmap.manual_scroll_step2)
+                }
+                else if(position==(adapter.getCount()-1)){
+                    manualBtn.setText("START")
+                    manualScroll.setImageResource(R.mipmap.manual_scroll_step3)
                 }
             }
         })
