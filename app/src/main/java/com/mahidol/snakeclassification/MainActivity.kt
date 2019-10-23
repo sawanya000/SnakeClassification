@@ -1,6 +1,7 @@
 package com.mahidol.snakeclassification
 
 import android.content.Context
+import android.content.Intent
 
 import android.os.Bundle
 
@@ -23,12 +24,16 @@ class MainActivity : AppCompatActivity() {
         setButtonSwitchLanguage()
     }
 
+
     private fun setButton() {
         pictureBtn.setOnClickListener {
-            val view = layoutInflater.inflate(R.layout.bottom_sheet_layout, null)
-            val dialog = BottomSheetDialog(this)
-            dialog.setContentView(view)
-            dialog.show()
+//            val view = layoutInflater.inflate(R.layout.bottom_sheet_layout, null)
+//            val dialog = BottomSheetDialog(this)
+//            dialog.setContentView(view)
+//            dialog.show()
+
+            val intent = Intent(this,ResultActivity::class.java)
+            startActivity(intent)
         }
     }
 
