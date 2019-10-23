@@ -1,6 +1,7 @@
 package com.mahidol.snakeclassification
 
 import android.content.Context
+import android.content.Intent
 
 import android.os.Bundle
 
@@ -21,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setButton()
         setButtonSwitchLanguage()
+        setButtonManual()
+    }
+
+    private fun setButtonManual(){
+        manualBtn.setOnClickListener(){
+            var intent = Intent(this,ManualActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setButton() {
