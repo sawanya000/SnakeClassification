@@ -19,6 +19,22 @@ class MainActivity : AppCompatActivity() {
         setButton()
         setInfoButton()
         setButtonSwitchLanguage()
+        setManualButton()
+
+    }
+
+    private fun setManualButton() {
+        manualBtn.setOnClickListener {
+            val intent = Intent(this, ManualActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun setInfoButton() {
+        infoBtn.setOnClickListener {
+            val intent = Intent(this, SnakeInfoActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setButton() {
