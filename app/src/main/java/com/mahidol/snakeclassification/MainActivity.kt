@@ -2,13 +2,9 @@ package com.mahidol.snakeclassification
 
 import android.content.Context
 import android.content.Intent
-
 import android.os.Bundle
-
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
-
-
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -21,15 +17,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setButton()
+        setInfoButton()
         setButtonSwitchLanguage()
-        setButtonManual()
-    }
-
-    private fun setButtonManual(){
-        manualBtn.setOnClickListener(){
-            var intent = Intent(this,ManualActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun setButton() {
