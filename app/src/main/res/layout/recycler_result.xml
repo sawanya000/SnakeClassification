@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="53dp"
+    android:layout_height="59dp"
     android:orientation="vertical">
- 
+
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/colorResult"
         android:layout_width="31dp"
         android:layout_height="31dp"
         android:layout_marginStart="8dp"
@@ -23,23 +23,23 @@
         android:id="@+id/speciesTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
         android:fontFamily="@font/th_sarabun_new_bold"
         android:text="TextView"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/serumTxt"
-        app:layout_constraintStart_toStartOf="@+id/serumTxt"
+        app:layout_constraintStart_toEndOf="@+id/colorResult"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/serumTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:fontFamily="@font/th_sarabun_new_bold"
         android:text="TextView"
-        android:textSize="13sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/speciesTxt"
         app:layout_constraintTop_toBottomOf="@+id/speciesTxt" />
 
     <TextView
@@ -53,5 +53,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/line"
+        android:background="#E4E4E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
