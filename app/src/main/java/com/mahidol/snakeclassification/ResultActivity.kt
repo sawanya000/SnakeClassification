@@ -8,14 +8,13 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
-import com.github.mikephil.charting.utils.ColorTemplate
 import kotlinx.android.synthetic.main.activity_result.*
-import kotlinx.android.synthetic.main.activity_snake_info.*
 
 class ResultActivity : AppCompatActivity() {
     var data_text:ArrayList<ResultData>
     lateinit var dataset:PieDataSet
     lateinit var data:PieData
+
     val colors = arrayListOf(Color.parseColor("#E07A5F"),
         Color.parseColor("#F2CC8F"),Color.parseColor("#81B29A"),
         Color.parseColor("#E9E9E9"))
