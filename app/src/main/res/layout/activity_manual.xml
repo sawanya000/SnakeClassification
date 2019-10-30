@@ -16,20 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/manual_scroll_step1" />
 
-    <androidx.appcompat.widget.AppCompatToggleButton
-        android:id="@+id/btn_sw_lan"
-        android:layout_width="54dp"
-        android:layout_height="25dp"
-        android:background="@drawable/changelanbutton"
-        android:text=""
-        android:textOff=""
-        android:textOn=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.914"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -62,18 +48,19 @@
     <ImageView
         android:id="@+id/manualBg"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.6"
         app:srcCompat="@mipmap/manual_background" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/manualViewPager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:background="@android:color/transparent"
         android:clipToPadding="false"
         android:foregroundGravity="center"
