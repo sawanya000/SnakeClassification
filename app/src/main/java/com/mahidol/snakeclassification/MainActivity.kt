@@ -3,15 +3,23 @@ package com.mahidol.snakeclassification
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    internal var storage: FirebaseStorage? = null
+    internal var storageReference: StorageReference? = null
+
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(LocaleHelper().onAttach(newBase!!, "en"))
     }
@@ -19,11 +27,17 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupFilebase()
         setPictureButton()
         setInfoButton()
         setButtonSwitchLanguage()
         setManualButton()
 
+    }
+
+    private fun setupFilebase(){
+        storage = FirebaseStorage.getInstance()
+        storageReference = storage!!.reference
     }
 
     private fun onChooseFile() {
@@ -37,18 +51,19 @@ class MainActivity : AppCompatActivity() {
             var result :CropImage.ActivityResult? = CropImage.getActivityResult(data)
 
             if (resultCode == Activity.RESULT_OK){
-                /*
-                    imageUri = result!!.uri
-                    imageView.setImageURI(imageUri)
-                */
-                val intent = Intent(this,ResultActivity::class.java)
-                startActivity(intent)
+                changeToLoadingPage(result!!)
             }
             else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
                 var e: Exception = result!!.error
                 Toast.makeText(this,"Error is: $e", Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun changeToLoadingPage(result :CropImage.ActivityResult?){
+        val intent = Intent(this,LoadingActivity::class.java)
+        intent.putExtra("imageUri", result!!.uri.toString())
+        startActivity(intent)
     }
 
     private fun setInfoButton() {
@@ -108,4 +123,6 @@ class MainActivity : AppCompatActivity() {
         textView.text = resources.getString(R.string.Main_Info)
         textView5.text = resources.getString(R.string.Main_Manual)*/
     }
+
+
 }
