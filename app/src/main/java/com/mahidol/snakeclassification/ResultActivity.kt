@@ -1,29 +1,42 @@
 package com.mahidol.snakeclassification
 
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Toast
+import androidx.core.net.toUri
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_result.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class ResultActivity : AppCompatActivity() {
-    var data_text:ArrayList<ResultData>
-    lateinit var dataset:PieDataSet
-    lateinit var data:PieData
+    var data_text: ArrayList<ResultData>
+    lateinit var dataset: PieDataSet
+    lateinit var data: PieData
 
-    val colors = arrayListOf(Color.parseColor("#E07A5F"),
-        Color.parseColor("#F2CC8F"),Color.parseColor("#81B29A"),
-        Color.parseColor("#E9E9E9"))
+    val colors = arrayListOf(
+        Color.parseColor("#E07A5F"),
+        Color.parseColor("#F2CC8F"), Color.parseColor("#81B29A"),
+        Color.parseColor("#E9E9E9")
+    )
+
     init {
-        data_text = arrayListOf(ResultData("งูจงอาง",59F),
-            ResultData("งูทับสมิงคลา",23F),ResultData("งูเห่า",12F),
-            ResultData("อื่นๆ",6F)
+        data_text = arrayListOf(
+            ResultData("งูจงอาง", 59F),
+            ResultData("งูทับสมิงคลา", 23F), ResultData("งูเห่า", 12F),
+            ResultData("อื่นๆ", 6F)
         )
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -70,7 +83,7 @@ class ResultActivity : AppCompatActivity() {
 
     }
 
-    private fun setUpRecyclerView(){
+    private fun setUpRecyclerView() {
         val linearLayoutManager = LinearLayoutManager(
             baseContext,
             LinearLayoutManager.VERTICAL, false
@@ -79,4 +92,5 @@ class ResultActivity : AppCompatActivity() {
         val adapter = RecyclerResultAdapter(data_text, this)
         recycler_result_view.adapter = adapter
     }
+
 }

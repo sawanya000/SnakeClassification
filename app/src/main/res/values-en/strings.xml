@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="App_Name">Snake Classification</string>
-    <string name="Main_ChoosePic">เลือกรูปภาพ</string>
-    <string name="Main_Info">ssssssssssssss</string>
-    <string name="Main_Manual">nnnnnnnnnnnnnnnnn</string>
+    <string name="Main_ChoosePic">Choose Picture</string>
+    <string name="Main_Info">Info Of Venomous Snake</string>
+    <string name="Main_Manual">Manual</string>
+    <string name="Main_History">History</string>
 
 
-    <string name="Load">กำลังโหลด</string>
-    <string name="Read_more">อ่านต่อ</string>
-    <string name="Serum">เซรุ่ม</string>
-    <string name="Other">อื่น ๆ</string>
+    <string name="Load">Loading</string>
+    <string name="Read_more">Read More</string>
+    <string name="Serum">Serum</string>
+    <string name="Other">Other</string>
 
 
-    <string name="King_Cobra">งูจงอาง</string>
-    <string name="Cobra">งูเห่า</string>
-    <string name="Banded_Krait">งูสามเหลี่ยม</string>
-    <string name="Malayan_Krait">งูทับสมิงคลา</string>
-    <string name="Russell_Viper">งูแมวเซา</string>
-    <string name="Malayan_Pitviper">งูกะปะ</string>
-    <string name="White_lipped_Pitviper">งูเขียวหางไหม้ท้องเหลือง</string>
+    <string name="King_Cobra">King Cobra</string>
+    <string name="Cobra">Cobra</string>
+    <string name="Banded_Krait">Banded Krait</string>
+    <string name="Malayan_Krait">Malayan Krait</string>
+    <string name="Russell_Viper">Russell Viper</string>
+    <string name="Malayan_Pitviper">Malayan Pitviper</string>
+    <string name="White_lipped_Pitviper">White lipped Pitviper</string>
 
-    <string name="Info_King_Cobra">งูจงอาง จัดอยู่ในไฟลัมสัตว์มีกระดูกสันหลัง ชั้นสัตว์เลื้อยคลาน ป็นงูพิษขนาดใหญ่ โดยทั่วไปมีความยาวเฉลี่ยประมาณ 3.5–4.5 เมตร จัดเป็นงูพิษที่มีขนาดยาวที่สุดในโลก ตัวที่ยาวเป็นสถิติโลกมีความยาว 5.85 เมตร</string>
-    <string name="Info_Cobra">งูเห่าจัดเป็นงูที่อันตราย มีนิสัยดุร้ายเช่นเดียวกับงูจงอางเมื่อตกใจหรือต้องการขู่ศัตรู มักทำเสียงขู่ฟู่ ๆ โดยพ่นลมออกจากทางรูจมูก และแผ่แผ่นหนังที่อยู่หลังบริเวณคอออกเป็นแผ่นด้านข้างเรียกว่า "แม่เบี้ย" หรือ "พังพาน" ซึ่งบริเวณแม่เบี้ยนี้จะมีลวดลายเป็นดอกดวงสี</string>
-    <string name="Info_Banded_Krait">ลำตัวมีสีดำสลับเหลืองเป็นปล้องขนาดใกล้เคียงกันตลอดตัวทั้งส่วนบนและส่วนท้อง โดยส่วนท้องมีสีจางกว่า ลักษณะเด่นคือ แนวของกระดูกสันหลังยกตัวสูงเด่น ทำให้เห็นเป็นรูปสามเหลี่ยมชัดเจน ปลายหางทู่มน มีขนาด 100 - 180 เซนติเมตร</string>
-    <string name="Info_Malayan_Krait">ลำตัวค่อนข้างกลมไม่เป็นสันชัดเจนอย่างงูสามเหลี่ยม มีสีดำสลับขาวเป็นปล้องตลอดความยาวลำตัว มีเกล็ดดำแซมอยู่ในปล้องขาว ส่วนท้องมีสีขาว ส่วนบนของหัวมีสีดำปนเทา ส่วนหางเรียวยาวและปลายหางแหลม เป็นงูที่ว่องไวปราดเปรียวและพิษมีความรุนแรงกว่างูสามเหลี่ยม</string>
-    <string name="Info_Russell_Viper">ลำตัวอ้วนเทอะทะ พื้นลำตัวมีสีน้ำตาลอ่อนแต้มลายเป็นวงสีน้ำตาลเข้มกระจายอยู่ทั่วตัวโดยมีขอบด้านในสีดำ ส่วนขอบด้านนอกสีขาว ลายบางลายเชื่อมติดกันหรือมีขนาดแตกต่างกันไป หัวเป็นรูปสามเหลี่ยมปกคลุมด้วยเกล็ดขนาดเล็กมีสัน ลวดลายบนหัวมีสีน้ำตาลเข้มมองดูคล้ายหัวลูกศร</string>
-    <string name="Info_Malayan_Pitviper">งูกะปะ เป็นงูพิษที่มีพิษรุนแรงมากมีผลต่อ ระบบเลือดมีชื่อวิทยาศาสตร์ว่า Calloselasma rhodostoma จัดเป็นงูเพียงชนิดเดียวเท่านั้นที่อยู่ในสกุล Calloselasma โดยไม่มีชนิดย่อยที่อยู่ในวงศ์งูแมวเซา (Viperidae)</string>
-    <string name="Info_White_lipped_Pitviper">งูเขียวหางไหม้ เป็นงูที่อยู่ในสกุล Trimeresurus ในวงศ์งูแมวเซา(Viperidae) มีรูปร่างโดยรวม คือ มีหัวยาวมนใหญ่เป็นรูปสามเหลี่ยมคอเล็ก ตัวอ้วนสั้น ปลายหางมีสีแดง ลำตัวมีสีเขียวอมเหลืองสดบางตัวมีสีเขียวอมน้ำเงิน หางสีแดงสด บางตัวมีหาง</string>
+    <string name="Info_King_Cobra">The king cobra (Ophiophagus hannah), also known as the hamadryad, is a venomous snake species in the family Elapidae, endemic to forests from India through Southeast Asia.</string>
+    <string name="Info_Cobra">Cobra is the common name of various elapid snakes, most of which belonging to the genus Naja. All of the known cobras are venomous and many are capable of rearing upwards and producing a hood when threatened</string>
+    <string name="Info_Banded_Krait">The banded krait is easily identified by its alternate black and yellow crossbands, its triangular body cross section, and the marked vertebral ridge consisting of enlarged vertebral shields along its body.</string>
+    <string name="Info_Malayan_Krait">About 50% of all bites from this krait results in human death – even with the administration of antivenin (antivenom). Death is the usual result if no treatment is given.</string>
+    <string name="Info_Russell_Viper">Russell viper (Daboia russelii) is a species of venomous snake in the family Viperidae of venomous Old World vipers. It is found in Asia throughout the Indian subcontinent, much of Southeast Asia, southern China and Taiwan.</string>
+    <string name="Info_Malayan_Pitviper">Malayan Pit Viper is a monotypic genus[3] created for a venomous pit viper species, C. rhodostoma, which is endemic to Southeast Asia from Thailand to northern Malaysia and on the island of Java. No subspecies are currently recognized.</string>
+    <string name="Info_White_lipped_Pitviper">White Lipped Pit Viper is Maximum total length males 600 mm (24 in), females 810 mm (32 in); maximum tail length males 120 mm (4.7 in), females 130 mm (5.1 in). Color pattern: green above, the side of the head below the eyes is yellow</string>
 
 
-    <string name="Manual_Name_Step1">เลือกคลังภาพหรือถ่ายรูป</string>
-    <string name="Manual_Name_Step2">ถ่ายและครอบตัดรูปภาพ</string>
-    <string name="Manual_Name_Step3">แสดงผลลัพธ์</string>
+    <string name="Manual_Name_Step1">Choose A Picture From Gallery Or Take A Picture</string>
+    <string name="Manual_Name_Step2">Take A Picture then Crop A Picture</string>
+    <string name="Manual_Name_Step3">Show A Result</string>
 
-    <string name="Manual_Info_Step1">เลือกรูปจากคลังรูปภาพหรือถ่ายรูปเพื่อนำภาพไปประมวลผลว่าเป็นงูพิษในประเทศไทยสายพันธุ์ใด</string>
-    <string name="Manual_Info_Step2">ถ่ายรูปภาพงูและครอบตัดบริเวณที่มีงูในรูปภาพ โดยทำการครอบตัดภาพให้เห็นงูเต็มตัว เพื่อนำไปประมวลผล</string>
-    <string name="Manual_Info_Step3">ระบบจะทำการวิเคราะห์ภาพงูที่ส่งเข้ามา ซึ่งแสดงผลเป็นสายพันธุ์ของงูพิษที่มีความเป็นไปได้ 3 อันดับแรกและเซรุ่มที่เหมาะสมกับสายพันธุ์งูนั้น ๆ</string>
+    <string name="Manual_Info_Step1">Choose a picture from gallery or take a picture to processed which species of venomous snake in Thailand</string>
+    <string name="Manual_Info_Step2">Take a picture and then crop the snake area in the image. To be processed</string>
+    <string name="Manual_Info_Step3">The system will analyze the snake image. Which shows results as the top 3 venomous snake species and sarum that is suitable for the snake species</string>
 </resources>

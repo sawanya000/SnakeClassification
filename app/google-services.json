@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1075447642315",
+    "firebase_url": "https://secret-drake-258709.firebaseio.com",
+    "project_id": "secret-drake-258709",
+    "storage_bucket": "secret-drake-258709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075447642315:android:af3377a7461e3f96db434e",
+        "android_client_info": {
+          "package_name": "com.mahidol.snakeclassification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075447642315-o2dc3ueq9fs4a5bav1evtdjlhs8kaica.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRUfQwLMxGGP0vcsXNLYVDjOBMnN2yuGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075447642315-o2dc3ueq9fs4a5bav1evtdjlhs8kaica.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

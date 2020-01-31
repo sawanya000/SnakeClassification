@@ -1,12 +1,8 @@
 package com.mahidol.snakeclassification
 
 import android.content.Context
-import android.content.SharedPreferences
 import android.os.Build
-import android.preference.PreferenceManager
 import java.util.*
-import android.R.attr.mode
-import android.R.attr.name
 import android.annotation.SuppressLint
 
 
