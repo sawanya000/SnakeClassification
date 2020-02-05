@@ -1,4 +1,4 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,19 +9,20 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.mahidol.snakeclassification.Model.InfoData
 import com.mahidol.snakeclassification.Interface.ItemClickListener
+import com.mahidol.snakeclassification.R
 
 
 class RecyclerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
+    private var itemClickListener: ItemClickListener? = null
     var headerTxt: TextView
     var introTxt: TextView
     var image_left: ImageView
     var image_right: ImageView
     var layoutTxt: ConstraintLayout
     var backgroundCard: ConstraintLayout
-    private var itemClickListener: ItemClickListener? = null
-
 
     init {
         image_left = itemView.findViewById(R.id.snakeImgLeft)

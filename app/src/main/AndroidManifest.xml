@@ -15,19 +15,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".HistoryActivity"></activity>
-        <activity android:name=".LoadingActivity" />
+        <activity android:name=".Page.DetailActivity"></activity>
+        <activity
+            android:name=".Page.HistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Page.LoadingActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
-            android:name=".ManualActivity"
+            android:name=".Page.ManualActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ResultActivity"
+            android:name=".Page.ResultActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Page.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SnakeInfoActivity"
+            android:name=".Page.SnakeInfoActivity"
             android:screenOrientation="portrait" />
     </application>
 

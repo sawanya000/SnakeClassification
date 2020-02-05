@@ -1,15 +1,15 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Adapter
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.view.isInvisible
 import androidx.recyclerview.widget.RecyclerView
+import com.mahidol.snakeclassification.R
+import com.mahidol.snakeclassification.Model.ResultData
 
 class RecyclerResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 

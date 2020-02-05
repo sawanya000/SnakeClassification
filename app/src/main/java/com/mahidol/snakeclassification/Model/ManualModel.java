@@ -1,4 +1,4 @@
-package com.mahidol.snakeclassification;
+package com.mahidol.snakeclassification.Model;
 
 public class ManualModel {
     private int image;

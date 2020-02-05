@@ -1,18 +1,18 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Page
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.mahidol.snakeclassification.LocaleHelper
+import com.mahidol.snakeclassification.R
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_main.*
 import java.lang.Exception
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         setupFilebase()
         setPictureButton()
         setInfoButton()
+        setHistoryButton()
         setButtonSwitchLanguage()
         setManualButton()
 
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun changeToLoadingPage(result :CropImage.ActivityResult?){
-        val intent = Intent(this,LoadingActivity::class.java)
+        val intent = Intent(this, LoadingActivity::class.java)
         intent.putExtra("imageUri", result!!.uri.toString())
         startActivity(intent)
     }
@@ -80,6 +81,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun setHistoryButton(){
+        historyBtn.setOnClickListener {
+            val intent = Intent(this, HistoryActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
     private fun setPictureButton() {
         pictureBtn.setOnClickListener {
             onChooseFile()
@@ -90,7 +98,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setButtonSwitchLanguage() {
-        val currentLanguage = LocaleHelper().getPersistedData(this, "en")
+        val currentLanguage = LocaleHelper()
+            .getPersistedData(this, "en")
         btn_sw_lan.isChecked = currentLanguage == "th"
         btn_sw_lan.setOnCheckedChangeListener { compoundButton, isChecked ->
             /*
@@ -107,7 +116,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val currentLanguage = LocaleHelper().getPersistedData(this, "en")
+        val currentLanguage = LocaleHelper()
+            .getPersistedData(this, "en")
         btn_sw_lan.isChecked = currentLanguage == "th"
     }
 

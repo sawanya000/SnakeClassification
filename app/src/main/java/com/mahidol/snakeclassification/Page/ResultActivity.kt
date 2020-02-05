@@ -1,21 +1,17 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Page
 
 import android.graphics.Color
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import androidx.core.net.toUri
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.formatter.PercentFormatter
-import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
+import com.mahidol.snakeclassification.R
+import com.mahidol.snakeclassification.Adapter.RecyclerResultAdapter
+import com.mahidol.snakeclassification.Model.ResultData
 import kotlinx.android.synthetic.main.activity_result.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class ResultActivity : AppCompatActivity() {
@@ -32,7 +28,8 @@ class ResultActivity : AppCompatActivity() {
     init {
         data_text = arrayListOf(
             ResultData("งูจงอาง", 59F),
-            ResultData("งูทับสมิงคลา", 23F), ResultData("งูเห่า", 12F),
+            ResultData("งูทับสมิงคลา", 23F),
+            ResultData("งูเห่า", 12F),
             ResultData("อื่นๆ", 6F)
         )
     }

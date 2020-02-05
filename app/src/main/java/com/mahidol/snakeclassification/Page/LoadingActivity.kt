@@ -1,4 +1,4 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Page
 
 import android.content.Context
 import android.content.Intent
@@ -12,19 +12,30 @@ import androidx.core.net.toUri
 import com.bumptech.glide.Glide
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.mahidol.snakeclassification.Database.HistoryDataSource
+import com.mahidol.snakeclassification.R
 import kotlinx.android.synthetic.main.activity_loading.*
-import kotlinx.android.synthetic.main.popup_loading.*
+import java.text.SimpleDateFormat
 import java.util.*
 
 class LoadingActivity : AppCompatActivity() {
     internal var storage: FirebaseStorage? = null
     internal var storageReference: StorageReference? = null
+    private var dataSource: HistoryDataSource? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loading)
         setupFilebase()
+        setupSQLite()
         receiveData()
         setLoadingGif()
+
+    }
+
+    private fun setupSQLite(){
+        dataSource = HistoryDataSource(this)
+        dataSource!!.open()
     }
 
     private fun receiveData() {
@@ -44,6 +55,12 @@ class LoadingActivity : AppCompatActivity() {
         storageReference = storage!!.reference
     }
 
+    private fun getCurrentTime():String{
+        val sdf  = SimpleDateFormat("dd-MMM-yyyy HH:mm a", Locale.ENGLISH)
+        val date = Date()
+        return sdf.format(date)
+    }
+
     private fun uploadImageToFirebase(uri: Uri) {
 
         Toast.makeText(applicationContext, "..... Uploading .....", Toast.LENGTH_SHORT).show()
@@ -55,15 +72,14 @@ class LoadingActivity : AppCompatActivity() {
                     "..... File upload successfully .....",
                     Toast.LENGTH_SHORT
                 ).show()
-                val imageUri = it.uploadSessionUri
-
                 imgRef.downloadUrl.addOnSuccessListener {
                     val image = it
                     println("link : $image")
+                    dataSource!!.createHistory(uri.toString(),"KingCobra",getCurrentTime())
+                    val intent = Intent(this, ResultActivity::class.java)
+                    startActivity(intent)
+                    this.finish()
                 }
-                val intent = Intent(this, ResultActivity::class.java)
-                startActivity(intent)
-
             }
             .addOnFailureListener {
                 Toast.makeText(applicationContext, "..... Failed .....", Toast.LENGTH_SHORT).show()
@@ -75,8 +91,6 @@ class LoadingActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
-
     }
 
     private fun setLoadingGif() {
@@ -92,5 +106,15 @@ class LoadingActivity : AppCompatActivity() {
 
     fun convertDpToPixel(dp: Float, context: Context): Int {
         return (dp * (context.resources.displayMetrics.densityDpi.toFloat() / DisplayMetrics.DENSITY_DEFAULT)).toInt()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        dataSource!!.open()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        dataSource!!.close()
     }
 }

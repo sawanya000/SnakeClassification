@@ -1,12 +1,14 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Page
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
-import kotlinx.android.synthetic.main.activity_main.*
+import com.mahidol.snakeclassification.LocaleHelper
+import com.mahidol.snakeclassification.Adapter.ManualAdapter
+import com.mahidol.snakeclassification.Model.ManualModel
+import com.mahidol.snakeclassification.R
 import kotlinx.android.synthetic.main.activity_manual.*
 import kotlinx.android.synthetic.main.activity_manual.manualBtn
 import kotlinx.android.synthetic.main.manual_item.*
@@ -102,7 +104,8 @@ class ManualActivity : AppCompatActivity() {
     }
 
     private fun setLanguage(page: Int) {
-        val currentLanguage = LocaleHelper().getPersistedData(this@ManualActivity, "en")
+        val currentLanguage = LocaleHelper()
+            .getPersistedData(this@ManualActivity, "en")
         if (currentLanguage == "th") {
             setLocaleLanguage("th", page)
         } else {
@@ -111,7 +114,8 @@ class ManualActivity : AppCompatActivity() {
     }
 
     private fun setLocaleLanguage(language: String, page: Int) {
-        val context = LocaleHelper().setLocal(this@ManualActivity, language)
+        val context = LocaleHelper()
+            .setLocal(this@ManualActivity, language)
         val resources = context.resources
 
         when (page) {

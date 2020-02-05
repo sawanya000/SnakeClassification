@@ -1,20 +1,17 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import android.widget.Toast
-import android.widget.ToggleButton
 import androidx.viewpager.widget.PagerAdapter
-import kotlinx.android.synthetic.main.activity_manual.*
-import kotlinx.android.synthetic.main.manual_item.*
+import com.mahidol.snakeclassification.Model.ManualModel
+import com.mahidol.snakeclassification.R
 import kotlinx.android.synthetic.main.manual_item.view.*
 
 class ManualAdapter(var models: ArrayList<ManualModel>, var context: Context) : PagerAdapter() {
 
-    override fun isViewFromObject(view: View, `objects`: Any): Boolean {
+    override fun isViewFromObject(view: View, objects: Any): Boolean {
         return view == objects
     }
 

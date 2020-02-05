@@ -1,10 +1,14 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Page
 
 import android.content.Context
 import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mahidol.snakeclassification.Model.InfoData
+import com.mahidol.snakeclassification.LocaleHelper
+import com.mahidol.snakeclassification.R
+import com.mahidol.snakeclassification.Adapter.RecyclerAdapter
 import kotlinx.android.synthetic.main.activity_snake_info.*
 
 class SnakeInfoActivity : AppCompatActivity() {
@@ -73,7 +77,8 @@ class SnakeInfoActivity : AppCompatActivity() {
     }
 
     private fun setLanguage() {
-        val currentLanguage = LocaleHelper().getPersistedData(this, "en")
+        val currentLanguage = LocaleHelper()
+            .getPersistedData(this, "en")
         if (currentLanguage == "th") {
             setLocaleLanguage("th")
         } else {
