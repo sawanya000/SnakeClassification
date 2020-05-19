@@ -1,4 +1,4 @@
-package com.mahidol.snakeclassification
+package com.mahidol.snakeclassification.Helper
 
 import android.content.Context
 import android.os.Build

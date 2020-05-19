@@ -3,22 +3,26 @@ package com.mahidol.snakeclassification.Page
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.net.wifi.WifiManager
 import android.os.Bundle
+import android.provider.MediaStore
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.mahidol.snakeclassification.LocaleHelper
+import com.mahidol.snakeclassification.Helper.LocaleHelper
 import com.mahidol.snakeclassification.R
 import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_main.*
-import java.lang.Exception
+import java.io.ByteArrayOutputStream
 
 
 class MainActivity : AppCompatActivity() {
 
     internal var storage: FirebaseStorage? = null
     internal var storageReference: StorageReference? = null
+    private var wifiManager: WifiManager? = null
 
     override fun attachBaseContext(newBase: Context?) {
         super.attachBaseContext(LocaleHelper().onAttach(newBase!!, "en"))
@@ -27,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setWifiManager()
         setupFilebase()
         setPictureButton()
         setInfoButton()
@@ -49,21 +54,34 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
-            var result :CropImage.ActivityResult? = CropImage.getActivityResult(data)
+            val result :CropImage.ActivityResult? = CropImage.getActivityResult(data)
 
             if (resultCode == Activity.RESULT_OK){
-                changeToLoadingPage(result!!)
+                val mBitmap = MediaStore.Images.Media.getBitmap(this.contentResolver, result!!.uri)
+                val imgSmall = resizeBitmap(mBitmap, 300, 300)
+                changeToLoadingPage(result,BitmapToString(imgSmall))
             }
             else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
-                var e: Exception = result!!.error
+                val e: Exception = result!!.error
                 Toast.makeText(this,"Error is: $e", Toast.LENGTH_LONG).show()
             }
         }
     }
 
-    private fun changeToLoadingPage(result :CropImage.ActivityResult?){
+    fun BitmapToString(bitmap: Bitmap): String {
+        val outputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream)
+        return android.util.Base64.encodeToString(outputStream.toByteArray(), android.util.Base64.DEFAULT)
+    }
+
+    private fun resizeBitmap(bitmap: Bitmap, width:Int, height:Int):Bitmap{
+        return Bitmap.createScaledBitmap(bitmap, width, height, false)
+    }
+
+    private fun changeToLoadingPage(result :CropImage.ActivityResult?,imgBitmap: String){
         val intent = Intent(this, LoadingActivity::class.java)
         intent.putExtra("imageUri", result!!.uri.toString())
+        intent.putExtra("imageBitmap", imgBitmap)
         startActivity(intent)
     }
 
@@ -91,9 +109,20 @@ class MainActivity : AppCompatActivity() {
     private fun setPictureButton() {
         pictureBtn.setOnClickListener {
             onChooseFile()
+        }
+    }
 
-//            val intent = Intent(this, ResultActivity::class.java)
-//            startActivity(intent)
+    private fun setWifiManager() {
+        wifiManager = applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
+    }
+
+    private fun checkConnectWifi(){
+        if (!wifiManager!!.isWifiEnabled) {
+            Toast.makeText(this, "WiFi is disabled ", Toast.LENGTH_LONG)
+                .show()
+        }else{
+            Toast.makeText(this, "WiFi is enable ", Toast.LENGTH_LONG)
+                .show()
         }
     }
 
@@ -122,16 +151,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setLocaleLanguage(language: String) {
-        val context = LocaleHelper().setLocal(this, language)
+        val context = LocaleHelper()
+            .setLocal(this, language)
         val resources = context.resources
 
         textView2.text = resources.getString(R.string.Main_ChoosePic)
         textView3.text = resources.getString(R.string.Main_Info)
         textView4.text = resources.getString(R.string.Main_Manual)
         textView5.text = resources.getString(R.string.Main_History)
-        /* change this code follow your id text
-        textView.text = resources.getString(R.string.Main_Info)
-        textView5.text = resources.getString(R.string.Main_Manual)*/
+
     }
 
 

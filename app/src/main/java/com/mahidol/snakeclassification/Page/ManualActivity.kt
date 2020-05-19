@@ -1,14 +1,17 @@
 package com.mahidol.snakeclassification.Page
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.viewpager.widget.ViewPager
-import com.mahidol.snakeclassification.LocaleHelper
+import com.mahidol.snakeclassification.Helper.LocaleHelper
 import com.mahidol.snakeclassification.Adapter.ManualAdapter
 import com.mahidol.snakeclassification.Model.ManualModel
 import com.mahidol.snakeclassification.R
+import com.theartofdev.edmodo.cropper.CropImage
 import kotlinx.android.synthetic.main.activity_manual.*
 import kotlinx.android.synthetic.main.activity_manual.manualBtn
 import kotlinx.android.synthetic.main.manual_item.*
@@ -38,8 +41,36 @@ class ManualActivity : AppCompatActivity() {
             } else {
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                onChooseFile()
+                finish()
             }
         }
+    }
+
+    private fun onChooseFile() {
+        CropImage.activity().start(this)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE){
+            var result : CropImage.ActivityResult? = CropImage.getActivityResult(data)
+
+            if (resultCode == Activity.RESULT_OK){
+                changeToLoadingPage(result!!)
+            }
+            else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
+                var e: Exception = result!!.error
+                Toast.makeText(this,"Error is: $e", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    private fun changeToLoadingPage(result :CropImage.ActivityResult?){
+        val intent = Intent(this, LoadingActivity::class.java)
+        intent.putExtra("imageUri", result!!.uri.toString())
+        startActivity(intent)
     }
 
     private fun setViewPagerChangeListener() {

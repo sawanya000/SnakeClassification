@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.mahidol.snakeclassification.Helper.LocaleHelper
 import com.mahidol.snakeclassification.R
 import com.mahidol.snakeclassification.Model.ResultData
 
@@ -16,6 +17,7 @@ class RecyclerResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
     var speciesTxt: TextView
     var serumTxt: TextView
     var probabilityPercent: TextView
+    var serumNameType: TextView
     var colorResult: CardView
     var line:View
 
@@ -24,10 +26,9 @@ class RecyclerResultViewHolder(itemView: View) : RecyclerView.ViewHolder(itemVie
         serumTxt = itemView.findViewById(R.id.serumTxt)
         probabilityPercent = itemView.findViewById(R.id.probabilityPercent)
         colorResult = itemView.findViewById(R.id.colorResult)
+        serumNameType = itemView.findViewById(R.id.serumNameType)
         line = itemView.findViewById(R.id.line)
     }
-
-
 }
 
 class RecyclerResultAdapter(
@@ -49,9 +50,10 @@ class RecyclerResultAdapter(
     }
 
     override fun onBindViewHolder(holder: RecyclerResultViewHolder, position: Int) {
-
+        setLanguage(holder)
         holder.speciesTxt.text = resultData[position].species
-        holder.serumTxt.text = "เซรุ่ม : "
+        //holder.serumTxt.text = "เซรุ่ม : "
+        holder.serumNameType.text = resultData[position].serum
         holder.probabilityPercent.text = "${resultData[position].probability}%"
         var color = 0
         when(position%4){
@@ -68,6 +70,23 @@ class RecyclerResultAdapter(
 
     }
 
+    private fun setLanguage(holder: RecyclerResultViewHolder) {
+        val currentLanguage = LocaleHelper()
+            .getPersistedData(mContext, "en")
+        if (currentLanguage == "th") {
+            setLocaleLanguage("th",holder)
+        } else {
+            setLocaleLanguage("en",holder)
+        }
+    }
+
+    private fun setLocaleLanguage(language: String,holder: RecyclerResultViewHolder) {
+        val context = LocaleHelper()
+            .setLocal(mContext, language)
+        val resources = context.resources
+        holder.serumTxt.text = resources.getString(R.string.Serum)
+
+    }
 
     override fun getItemCount(): Int {
         return resultData.size

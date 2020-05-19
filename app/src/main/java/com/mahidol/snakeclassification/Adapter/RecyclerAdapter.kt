@@ -2,6 +2,7 @@ package com.mahidol.snakeclassification.Adapter
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
@@ -62,7 +63,6 @@ class RecyclerAdapter(private val infoData: ArrayList<InfoData>, private val mCo
         val params_layoutTxt = holder.layoutTxt.layoutParams as ConstraintLayout.LayoutParams
         holder.headerTxt.text = infoData[position].header
         holder.introTxt.text = infoData[position].intro
-
         when (position % 2) {
             0 -> {
 
