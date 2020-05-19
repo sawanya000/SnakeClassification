@@ -36,11 +36,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/th_sarabun_new_bold"
-        android:text="TextView"
+        android:text="@string/Serum"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/speciesTxt"
         app:layout_constraintTop_toBottomOf="@+id/speciesTxt" />
+
+    <TextView
+        android:id="@+id/serumNameType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        android:fontFamily="@font/th_sarabun_new_bold"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/serumTxt"
+        app:layout_constraintStart_toEndOf="@+id/serumTxt"
+        app:layout_constraintTop_toTopOf="@+id/serumTxt" />
 
     <TextView
         android:id="@+id/probabilityPercent"
@@ -62,5 +74,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

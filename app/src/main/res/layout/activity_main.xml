@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Primary"
-    tools:context=".MainActivity">
+    tools:context=".Page.MainActivity">
 
 
     <androidx.appcompat.widget.AppCompatToggleButton
@@ -235,7 +235,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/galleryBtn"
+        android:id="@+id/historyBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"

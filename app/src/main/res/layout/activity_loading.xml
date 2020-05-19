@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoadingActivity">
+    tools:context=".Page.LoadingActivity">
 
     <ImageView
         android:id="@+id/loading_gif"
@@ -26,5 +26,14 @@
         app:layout_constraintEnd_toEndOf="@+id/loading_gif"
         app:layout_constraintStart_toStartOf="@+id/loading_gif"
         app:layout_constraintTop_toBottomOf="@+id/loading_gif" />
+
+    <ImageView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

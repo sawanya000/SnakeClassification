@@ -9,7 +9,7 @@
 
     <string name="Load">Loading</string>
     <string name="Read_more">Read More</string>
-    <string name="Serum">Serum</string>
+    <string name="Serum">Serum : </string>
     <string name="Other">Other</string>
 
 
@@ -20,6 +20,14 @@
     <string name="Russell_Viper">Russell Viper</string>
     <string name="Malayan_Pitviper">Malayan Pitviper</string>
     <string name="White_lipped_Pitviper">White lipped Pitviper</string>
+
+    <string name="Serum_King_Cobra">King Cobra antivenin</string>
+    <string name="Serum_Cobra">Cobra antivenin</string>
+    <string name="Serum_Banded_Krait">Banded Krait antivenin</string>
+    <string name="Serum_Malayan_Krait">Malayan Krait antivenin</string>
+    <string name="Serum_Russell_Viper">Russell’s Viper antivenin</string>
+    <string name="Serum_Malayan_Pitviper">Malayan Pit Viper antivenin</string>
+    <string name="Serum_White_lipped_Pitviper">Green Pit Viper antivenin</string>
 
     <string name="Info_King_Cobra">The king cobra (Ophiophagus hannah), also known as the hamadryad, is a venomous snake species in the family Elapidae, endemic to forests from India through Southeast Asia.</string>
     <string name="Info_Cobra">Cobra is the common name of various elapid snakes, most of which belonging to the genus Naja. All of the known cobras are venomous and many are capable of rearing upwards and producing a hood when threatened</string>
