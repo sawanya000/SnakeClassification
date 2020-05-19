@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="App_Name">Snake Classification</string>
+    <string name="Main_ChoosePic">เลือกรูปภาพ</string>
+    <string name="Main_Info">ข้อมูลงูพิษในประเทศไทย</string>
+    <string name="Main_Manual">คู่มือการใช้งาน</string>
+    <string name="Main_History">ประวัติการใช้งาน</string>
+
+
+    <string name="Load">กำลังโหลด</string>
+    <string name="Read_more">อ่านต่อ</string>
+    <string name="Serum">เซรุ่ม : </string>
+    <string name="Other">อื่น ๆ</string>
+
+
+    <string name="King_Cobra">งูจงอาง</string>
+    <string name="Cobra">งูเห่า</string>
+    <string name="Banded_Krait">งูสามเหลี่ยม</string>
+    <string name="Malayan_Krait">งูทับสมิงคลา</string>
+    <string name="Russell_Viper">งูแมวเซา</string>
+    <string name="Malayan_Pitviper">งูกะปะ</string>
+    <string name="White_lipped_Pitviper">งูเขียวหางไหม้ท้องเหลือง</string>
+
+    <string name="Serum_King_Cobra">เซรุ่มแก้พิษงูจงอาง</string>
+    <string name="Serum_Cobra">เซรุ่มแก้พิษงูเห่า</string>
+    <string name="Serum_Banded_Krait">เซรุ่มแก้พิษงูสามเหลี่ยม</string>
+    <string name="Serum_Malayan_Krait">เซรุ่มแก้พิษงูทับสมิงคลา</string>
+    <string name="Serum_Russell_Viper">เซรุ่มแก้พิษงูแมวเซา</string>
+    <string name="Serum_Malayan_Pitviper">เซรุ่มแก้พิษงูกะปะ</string>
+    <string name="Serum_White_lipped_Pitviper">เซรุ่มแก้พิษงูเขียวหางไหม้</string>
+
+    <string name="Info_King_Cobra">งูจงอาง จัดอยู่ในไฟลัมสัตว์มีกระดูกสันหลัง ชั้นสัตว์เลื้อยคลาน ป็นงูพิษขนาดใหญ่ โดยทั่วไปมีความยาวเฉลี่ยประมาณ 3.5–4.5 เมตร จัดเป็นงูพิษที่มีขนาดยาวที่สุดในโลก ตัวที่ยาวเป็นสถิติโลกมีความยาว 5.85 เมตร</string>
+    <string name="Info_Cobra">งูเห่าจัดเป็นงูที่อันตราย มีนิสัยดุร้ายเช่นเดียวกับงูจงอางเมื่อตกใจหรือต้องการขู่ศัตรู มักทำเสียงขู่ฟู่ ๆ โดยพ่นลมออกจากทางรูจมูก และแผ่แผ่นหนังที่อยู่หลังบริเวณคอออกเป็นแผ่นด้านข้างเรียกว่า "แม่เบี้ย" หรือ "พังพาน" ซึ่งบริเวณแม่เบี้ยนี้จะมีลวดลายเป็นดอกดวงสี</string>
+    <string name="Info_Banded_Krait">ลำตัวมีสีดำสลับเหลืองเป็นปล้องขนาดใกล้เคียงกันตลอดตัวทั้งส่วนบนและส่วนท้อง โดยส่วนท้องมีสีจางกว่า ลักษณะเด่นคือ แนวของกระดูกสันหลังยกตัวสูงเด่น ทำให้เห็นเป็นรูปสามเหลี่ยมชัดเจน ปลายหางทู่มน มีขนาด 100 - 180 เซนติเมตร</string>
+    <string name="Info_Malayan_Krait">ลำตัวค่อนข้างกลมไม่เป็นสันชัดเจนอย่างงูสามเหลี่ยม มีสีดำสลับขาวเป็นปล้องตลอดความยาวลำตัว มีเกล็ดดำแซมอยู่ในปล้องขาว ส่วนท้องมีสีขาว ส่วนบนของหัวมีสีดำปนเทา ส่วนหางเรียวยาวและปลายหางแหลม เป็นงูที่ว่องไวปราดเปรียวและพิษมีความรุนแรงกว่างูสามเหลี่ยม</string>
+    <string name="Info_Russell_Viper">ลำตัวอ้วนเทอะทะ พื้นลำตัวมีสีน้ำตาลอ่อนแต้มลายเป็นวงสีน้ำตาลเข้มกระจายอยู่ทั่วตัวโดยมีขอบด้านในสีดำ ส่วนขอบด้านนอกสีขาว ลายบางลายเชื่อมติดกันหรือมีขนาดแตกต่างกันไป หัวเป็นรูปสามเหลี่ยมปกคลุมด้วยเกล็ดขนาดเล็กมีสัน ลวดลายบนหัวมีสีน้ำตาลเข้มมองดูคล้ายหัวลูกศร</string>
+    <string name="Info_Malayan_Pitviper">งูกะปะ เป็นงูพิษที่มีพิษรุนแรงมากมีผลต่อ ระบบเลือดมีชื่อวิทยาศาสตร์ว่า Calloselasma rhodostoma จัดเป็นงูเพียงชนิดเดียวเท่านั้นที่อยู่ในสกุล Calloselasma โดยไม่มีชนิดย่อยที่อยู่ในวงศ์งูแมวเซา (Viperidae)</string>
+    <string name="Info_White_lipped_Pitviper">งูเขียวหางไหม้ เป็นงูที่อยู่ในสกุล Trimeresurus ในวงศ์งูแมวเซา(Viperidae) มีรูปร่างโดยรวม คือ มีหัวยาวมนใหญ่เป็นรูปสามเหลี่ยมคอเล็ก ตัวอ้วนสั้น ปลายหางมีสีแดง ลำตัวมีสีเขียวอมเหลืองสดบางตัวมีสีเขียวอมน้ำเงิน หางสีแดงสด บางตัวมีหาง</string>
+
+
+    <string name="Manual_Name_Step1">เลือกคลังภาพหรือถ่ายรูป</string>
+    <string name="Manual_Name_Step2">ถ่ายและครอบตัดรูปภาพ</string>
+    <string name="Manual_Name_Step3">แสดงผลลัพธ์</string>
+
+    <string name="Manual_Info_Step1">เลือกรูปจากคลังรูปภาพหรือถ่ายรูปเพื่อนำภาพไปประมวลผลว่าเป็นงูพิษในประเทศไทยสายพันธุ์ใด</string>
+    <string name="Manual_Info_Step2">ถ่ายรูปภาพงูและครอบตัดบริเวณที่มีงูในรูปภาพ โดยทำการครอบตัดภาพให้เห็นงูเต็มตัว เพื่อนำไปประมวลผล</string>
+    <string name="Manual_Info_Step3">ระบบจะทำการวิเคราะห์ภาพงูที่ส่งเข้ามา ซึ่งแสดงผลเป็นสายพันธุ์ของงูพิษที่มีความเป็นไปได้ 3 อันดับแรกและเซรุ่มที่เหมาะสมกับสายพันธุ์งูนั้น ๆ</string>
+</resources>

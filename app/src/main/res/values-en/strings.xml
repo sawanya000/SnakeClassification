@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="App_Name">Snake Classification</string>
+    <string name="Main_ChoosePic">Choose Picture</string>
+    <string name="Main_Info">Info Of Venomous Snake</string>
+    <string name="Main_Manual">Manual</string>
+    <string name="Main_History">History</string>
+
+
+    <string name="Load">Loading</string>
+    <string name="Read_more">Read More</string>
+    <string name="Serum">Serum : </string>
+    <string name="Other">Other</string>
+
+
+    <string name="King_Cobra">King Cobra</string>
+    <string name="Cobra">Cobra</string>
+    <string name="Banded_Krait">Banded Krait</string>
+    <string name="Malayan_Krait">Malayan Krait</string>
+    <string name="Russell_Viper">Russell Viper</string>
+    <string name="Malayan_Pitviper">Malayan Pitviper</string>
+    <string name="White_lipped_Pitviper">White lipped Pitviper</string>
+
+    <string name="Serum_King_Cobra">King Cobra antivenin</string>
+    <string name="Serum_Cobra">Cobra antivenin</string>
+    <string name="Serum_Banded_Krait">Banded Krait antivenin</string>
+    <string name="Serum_Malayan_Krait">Malayan Krait antivenin</string>
+    <string name="Serum_Russell_Viper">Russell’s Viper antivenin</string>
+    <string name="Serum_Malayan_Pitviper">Malayan Pit Viper antivenin</string>
+    <string name="Serum_White_lipped_Pitviper">Green Pit Viper antivenin</string>
+
+    <string name="Info_King_Cobra">The king cobra (Ophiophagus hannah), also known as the hamadryad, is a venomous snake species in the family Elapidae, endemic to forests from India through Southeast Asia.</string>
+    <string name="Info_Cobra">Cobra is the common name of various elapid snakes, most of which belonging to the genus Naja. All of the known cobras are venomous and many are capable of rearing upwards and producing a hood when threatened</string>
+    <string name="Info_Banded_Krait">The banded krait is easily identified by its alternate black and yellow crossbands, its triangular body cross section, and the marked vertebral ridge consisting of enlarged vertebral shields along its body.</string>
+    <string name="Info_Malayan_Krait">About 50% of all bites from this krait results in human death – even with the administration of antivenin (antivenom). Death is the usual result if no treatment is given.</string>
+    <string name="Info_Russell_Viper">Russell viper (Daboia russelii) is a species of venomous snake in the family Viperidae of venomous Old World vipers. It is found in Asia throughout the Indian subcontinent, much of Southeast Asia, southern China and Taiwan.</string>
+    <string name="Info_Malayan_Pitviper">Malayan Pit Viper is a monotypic genus[3] created for a venomous pit viper species, C. rhodostoma, which is endemic to Southeast Asia from Thailand to northern Malaysia and on the island of Java. No subspecies are currently recognized.</string>
+    <string name="Info_White_lipped_Pitviper">White Lipped Pit Viper is Maximum total length males 600 mm (24 in), females 810 mm (32 in); maximum tail length males 120 mm (4.7 in), females 130 mm (5.1 in). Color pattern: green above, the side of the head below the eyes is yellow</string>
+
+
+    <string name="Manual_Name_Step1">Choose A Picture From Gallery Or Take A Picture</string>
+    <string name="Manual_Name_Step2">Take A Picture then Crop A Picture</string>
+    <string name="Manual_Name_Step3">Show A Result</string>
+
+    <string name="Manual_Info_Step1">Choose a picture from gallery or take a picture to processed which species of venomous snake in Thailand</string>
+    <string name="Manual_Info_Step2">Take a picture and then crop the snake area in the image. To be processed</string>
+    <string name="Manual_Info_Step3">The system will analyze the snake image. Which shows results as the top 3 venomous snake species and sarum that is suitable for the snake species</string>
+</resources>
